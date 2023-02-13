@@ -1,47 +1,43 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <body>
+        <div class="bg">
+            <!-- 内层div元素作为粒子(particle)
+        <div></div>
+        <div></div>
+        ... -->
+        </div>
+    </body>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    box-sizing: border-box;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+html,
+body {
+    height: 100vh;
+}
+</style>
+
+<style>
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(#003010, #000000);
+    overflow: hidden;
+    position: relative;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.bg>div {
+    position: absolute;
+    border-radius: 50%;
 }
 </style>
